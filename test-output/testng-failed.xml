@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ACME Test Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="os" value="windows"/>
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="utilities.AllureReportManager"/>
+  </listeners>
+  <test thread-count="5" name="Master Tests(failed)">
+    <classes>
+      <class name="testCases.TC005_InvoiceInquiryPageTest">
+        <methods>
+          <include name="setupPageObjects"/>
+          <include name="tearDown"/>
+          <include name="verifyInvoicesInquiryAdvanceFiltes"/>
+          <include name="setup"/>
+          <include name="verifyInvoiceInquiryTabCollapseSectionToShowOrHideAdvanceFilters"/>
+          <include name="validatePaginationControls"/>
+        </methods>
+      </class> <!-- testCases.TC005_InvoiceInquiryPageTest -->
+    </classes>
+  </test> <!-- Master Tests(failed) -->
+</suite> <!-- Failed suite [ACME Test Suite] -->

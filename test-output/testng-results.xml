@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-08T11:52:02 IST" name="ACME Test Suite" finished-at="2025-10-08T11:52:06 IST" duration-ms="3244">
+    <groups>
+    </groups>
+    <test started-at="2025-10-08T11:52:02 IST" name="Master Tests" finished-at="2025-10-08T11:52:06 IST" duration-ms="3244">
+      <class name="testCases.TC001_LoginPageTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_LoginPageTest@181d8899]" started-at="2025-10-08T11:51:59 IST" name="setup" finished-at="2025-10-08T11:52:02 IST" duration-ms="3453" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verify_login_page()[pri:0, instance:testCases.TC001_LoginPageTest@181d8899]" started-at="2025-10-08T11:52:02 IST" name="verify_login_page" finished-at="2025-10-08T11:52:05 IST" duration-ms="3054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_login_page -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_LoginPageTest@181d8899]" started-at="2025-10-08T11:52:06 IST" name="tearDown" finished-at="2025-10-08T11:52:06 IST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC001_LoginPageTest -->
+    </test> <!-- Master Tests -->
+  </suite> <!-- ACME Test Suite -->
+</testng-results>

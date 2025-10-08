@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    
+    <!-- Properties for log file paths -->
+    <Properties>
+       <!-- <! <Property name="log-path">logs</Property>  -->
+        <Property name="basePath">./logs</Property>
+    </Properties>
+
+    <!-- Appenders -->
+    <Appenders>
+        
+        <!-- Console Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+
+        <!-- Rolling File Appender -->
+        <RollingFile name="File" fileName="${basePath}/automation.log"
+                     filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <!-- Roll file every 10MB -->
+                <SizeBasedTriggeringPolicy size="10 MB" />
+                <!-- Also roll daily -->
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+
+    </Appenders>
+
+    <!-- Loggers -->
+    <Loggers>
+
+        <!-- Your project logger -->
+        <Logger name="com.ACME" level="Info" additivity="false">
+           <AppenderRef ref="Console" /> 
+           <!--  <AppenderRef ref="File" /> --> 
+        </Logger>
+
+        <!-- Root logger -->
+        <Root level="Info">  
+             <AppenderRef ref="Console" /> 
+          <!--  <AppenderRef ref="File" /> --> 
+        </Root>
+
+    </Loggers>
+</Configuration>
