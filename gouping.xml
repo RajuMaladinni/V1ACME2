@@ -20,8 +20,8 @@
 	-->	
 	
 	<listeners>
-		
-				<listener class-name="utilities.AllureReportManagerNew"/>
+			<listener class-name="utilities.AllureReportManager"/>
+			
 	</listeners>
 	
 	<parameter name="os" value="windows"></parameter>
@@ -30,8 +30,12 @@
   		<test thread-count="5" name="Master Tests">
    			 <classes>
 					
-					<class name="testCases.TC001_LoginPageTest"/> 
-					
+					 <class name="testCases.TC001_LoginPageTest"/> 
+					 <class name="testCases.TC002_DashboardPageTest"/>
+		     		 <class name="testCases.TC003_GeneralInvoiceTest"/>
+					 <class name="testCases.TC004_WorkCenterPageTest"/>
+		      		 <class name="testCases.TC005_InvoiceInquiryPageTest"/>
+		      	 	 <class name="testCases.TC006_ReRunInvoicePageTest"/>
 		   			
 		  		 <!--  
 		   		 <class name="testCases.TC_AllTest"/>
@@ -49,3 +53,4 @@
     
   		</test> <!-- Test -->
 </suite> <!-- Suite -->
+
